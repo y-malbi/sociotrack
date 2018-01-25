@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+@import "normalize";
+
+@import "helpers/variables";
+@import "helpers/mixins";
+
+@import "layout/header";
+@import "layout/aside";
+@import "layout/footer";
+
+body{
+	background: #E5E5E5;
+	color: $font-color;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	display: flex;
+	align-items: stretch;
+	position: relative;
+}
+
+a{
+	text-decoration: none;
+}
+
+p{
+	margin: 0;
+}
+button,
+.button,
+input{
+	outline: none;
+}
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+svg{
+	fill: $font-color;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	&.arrow{
+		width: 7px;
+		height: 12px;
+		opacity: 0.4;
+	}
+}
+ul{
+	list-style: none;
+	padding:0;
+	font-size: 0;
+}
+
+main{
+	width: 83.3%;
+	float:right;
+	.tab-content{
+		display: none;
+		width: auto;
+		margin-top: 70px;
+    padding-top: 40px;
+		&.active{
+			display: block;
+		}
+		.heading,
+		.button-group,
+		.grid{
+			width: 90%;
+			max-width: 950px;
+		}
+		.heading{
+			max-width: 950px;
+			margin: auto;
+			position: relative;
+			.show-modal{
+				position: absolute;
+				right: 0;
+				background: transparent;
+				border-radius: 4px;
+				color: $theme-color;
+				&:hover{
+					color:$font-color;
+					background: $theme-color;
+				}
+				&:active{
+					border-color: $font-color;
+				}
+			}
+		}
+		.show-modal,
+		.form-btn{
+			border: 1px solid $theme-color;
+			padding: 11px 15px;
+			transition: all 0.5s ease;
+		}
+		.modal{
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 40%;
+			z-index: 100;
+			width: 65%;
+			background: #fff;
+			border-radius: 4px;
+			padding: 25px;
+			transform: translate(-40%, -30%);
+			color: #4F4F4F;
+			@include medium {
+				padding: 15px;
+			}
+			&.active{
+				display: block;
+			}
+			p{
+				padding-bottom: 20px;
+			}
+			.modal-title{
+				font-size: 18px;
+				font-weight: 700;
+				text-transform: capitalize;
+				padding-bottom: 30px;
+				display: inline-block;
+			}
+			.close-btn{
+				border: 1px solid transparent;
+				background: transparent;
+				float: right;
+				&:hover,
+				&:active{
+					svg{
+						fill: $theme-color;
+					}
+				}
+				svg{
+					width: 12px;
+					height: 12px;
+					fill: #4F4F4F;
+				}
+			}
+			label{
+				font-size: 13px;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			input{
+				width: 92%;
+				border-radius: 4px;
+				height: 40px;
+				font-size: 14px;
+				padding: 0 4%;
+				border: 1px solid #C5CFC9;
+				margin-bottom: 22px;
+				&::-webkit-input-placeholder {
+					color: #B6B6B6;
+					font-weight: 400;
+				}
+			}
+			.form-btn{
+				border-radius: 6px;
+				background: $theme-color;
+				color: $font-color;
+				width: 20%;
+				float: right;
+				&:hover{
+					opacity: 0.8;
+				}
+				&:active{
+					opacity: 0.6;
+				}
+				@include small {
+					width: 100%;
+					float: none;
+				}
+			}
+		}
+
+		.username {
+			display: inline-block;
+			color: $theme-color;
+			font-weight: 700;
+			font-size: 24px;
+			text-transform: lowercase;
+			@include medium {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+.modal-bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+	background: rgba(0,0,0, 0.5);
+}
+
+
+/*Masonry */
+.button-group{
+	width: 90%;
+	max-width: 950px;
+	margin: 20px auto;
+	@include medium {
+		margin: 15px auto;
+	}
+	.button {
+		border: none;
+		background: transparent;
+		padding: 9px 14px;
+		color: #464646;
+		position: relative;
+		border-bottom: 2px solid transparent;
+		&:hover,
+		&.is-checked{
+			border-color: #B8E986;
+			transition: border, 0.5s, ease;
+		}
+	}
+}
+
+
+.grid {
+	width: 90%;
+	max-width: 950px;
+	margin: auto;
+	.grid-item,
+	.grid-item-size {
+		width: 200px;
+		@include medium {
+			width: 150px;
+		}
+		@include small {
+			width: 100px;
+		}
+	}
+}
+.grid-item{
+	margin-bottom: 25px;
+	&:hover{
+		cursor: pointer;
+		.hover-img{
+			display: block;
+			position: absolute;
+			box-shadow: inset 0px 0 50px 0 rgba(0,0,0,1);
+			border-radius: 10px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.hover-img{
+		position: absolute; 
+		z-index: 1;
+		display: none;
+	}
+}
+.social-box{
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	position: relative;
+	color: #fff;
+	margin-bottom: 10px;
+	@include medium {
+		width: 150px;
+		height: 150px;
+	}
+	@include small {
+		width: 100px;
+		height: 100px;
+	}
+	&.facebook{
+		background: linear-gradient(180deg, #39579A 0%, #2C4479 97.23%), #39579A;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	}
+	&.twitter{
+		background: linear-gradient(#059FF5 0%, #059FC3 100%), #059FF5;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+		.arrow{
+			transform:scale(1,-1);
+		}
+	}
+	&.instagram{
+		background: #fc0 url(../images/instagram.png) no-repeat center center;
+		background-size: cover;
+	}
+	&.linkedin{
+		background: linear-gradient(#007EBB 0%, #007E9D 98.51%), #007EBB;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	}
+	&.youtube{
+		background: linear-gradient(#CE1312 0%, #B01312 100%), #CE1312;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	}
+	&.snapchat{
+		color: #000;
+		background: linear-gradient(#FFFE00 0%, #F3F200 96.43%), #FFFE00;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+		svg{
+			transform:scale(1,-1);
+		}
+	}
+	&.googleplus{
+		background: linear-gradient(180deg, #F93F2D 0%, #C73F2D 100%), #F93F2D;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	}
+	&.vine{
+		background: linear-gradient(#00B687 0%, #008E87 100%), #00B687;
+		box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.03);
+	}
+	svg,
+	.follower-count,
+	.stats{
+		position: absolute;
+	}
+	svg{
+		top:10%;
+		left:10%;
+	}
+	.follower-count{
+		top: 40%;
+		left: 10%;
+		.count{
+			font-size: 36px;
+			font-weight: 700;
+			letter-spacing: -2px;
+			@include medium {
+				font-size: 28px;
+			}
+			@include small {
+				font-size: 22px;
+			}
+		}
+		p{
+			text-transform: uppercase;
+			font-size: 9px;
+			letter-spacing: 2px;
+			@include medium {
+				font-size: 7px;
+			}
+			@include small {
+				letter-spacing: 1px;
+			}
+		}
+	}
+	.stats{
+		bottom: 10%;
+		right: 10%;
+		font-size: 28px;
+		@include medium {
+			font-size: 22px;
+			bottom: 5%;
+			right: 15%;
+		}
+		@include small {
+			font-size: 18px;
+		}
+		p{
+			display: inline-block;
+		}
+		.arrow{
+			top: 46%;
+			left: 110%;
+			@include medium {
+				top: 35%;
+				left: 113%;
+			}
+		}
+	}
+}
+
+.user{
+	font-size: 13px;
+	color: #333;
+	
+	.user-contact,
+	.avatar{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.avatar{
+		width: 35px;
+		height: auto;
+		@include small {
+			display: none;
+		}
+	}
+	.social{
+		opacity: 0.5;
+	}
+}
+

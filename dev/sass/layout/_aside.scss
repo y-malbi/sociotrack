@@ -1,0 +1,84 @@
+aside{
+	width: 16.7%;
+	min-height: 100vh;
+	float: left;
+	background: linear-gradient(180deg, #27B983 -18.15%, #91E857 266.75%);
+	box-shadow: inset -1px 0px 0px rgba(28, 175, 94, 0.1);
+	.profile{
+		padding-top: 109px;
+		width: 90%;
+		margin-left: 10%;
+		@include medium {
+			text-align: center;
+			margin:auto;
+			padding-top: 80px;
+		}
+		img,
+		.info{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		img{
+			border-radius: 50%;
+			border: 2px solid $font-color;
+			width: 45px;
+			@include medium {
+				margin-bottom: 10px;
+			}
+		}
+		.followers{
+			font-weight: 700;
+			font-size: 12px;
+			color: rgba(0, 0, 0, 0.3);
+			padding-top: 5px;
+		}
+	}
+	.menu{
+		width: 85%;
+		margin: 40px auto;
+		@include medium {
+			margin-top: 20px;
+		}	
+	}
+	.menu-item{
+		height: 50px;
+		line-height: 50px;
+		padding-left: 10%;
+		transition: all 0.5s ease;
+		font-size: 14px;
+		@include medium {
+			height: 40px;
+			line-height: 40px;
+		}
+		@include small {
+			padding-left: 0;
+			text-align: center;
+		}
+		&.active-tab,
+		&:hover{
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 5px;
+			.tab-title{
+				padding-left: 0;
+			}
+		}
+		svg{
+			@include medium {
+				width: 15px;
+				height: 15px;
+			}
+		}
+		.tab-title{
+			padding-left: 15px;
+			color: $font-color;
+			text-decoration: none;
+			@include medium {
+				font-size: 12px;
+				padding-left: 5px;
+			}
+			@include small {
+				font-size: 0;
+			}
+		}
+	}
+}

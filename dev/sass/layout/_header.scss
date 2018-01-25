@@ -1,0 +1,91 @@
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	z-index: 5;
+	background: rgba(255, 255, 255, 0.1);
+	svg{
+		fill:#2C3E51;
+	}
+	.logo{
+		position: absolute;
+		width: 16.7%;
+		height: 70px;
+		svg{
+			fill: $font-color;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 124px;
+			height: 25px;
+			@include medium {
+				transform: scale(0.8, 0.8);
+			}
+			@include small {
+				transform: scale(0.6, 0.6);
+				left: -15%;
+			}
+		}
+	}
+	button{
+		background: transparent;
+		border: none;
+	}
+	.notifications{
+		position: absolute;
+		top: 50%;
+		right: 8.5%;
+		transform: translate(-4.25%, -50%);
+		z-index: 3;
+		@include small {
+			right: 10%;
+		}
+	}
+	form{
+		position: relative;
+		width: 83.3%;
+		height: 70px;
+		float: right;
+		background: $font-color;
+		input{
+			border: none;
+			outline: none;
+			width: 0;
+			height: 68px;
+			position: absolute;
+			top: 0;
+			right: 6%;
+			padding: 0;
+			padding-left: 20px;
+			color: $theme-color;
+			font-size: 20px;
+			font-weight: 700;
+			background: transparent;
+			border-bottom: 2px solid transparent;
+			z-index: 2;
+			transition: all 0.4s cubic-bezier(0, 0.8, 0, 1);
+			cursor: pointer;
+			&:focus{
+				width: 85%;
+				z-index: 1;
+				border-color: $theme-color;
+				cursor: text;
+			}
+		}
+		.search{
+			position: absolute;
+			top: 50%;
+			right: 5%;
+			transform: translate(-5%, -50%);
+			z-index: 1;
+			svg{
+				width: 20px;
+				height: 24px;
+			}
+		}
+	}
+}

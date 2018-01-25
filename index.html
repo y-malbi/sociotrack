@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="favicon.png">
+
+	<title>sociotrack</title>
+
+	<!-- Custom styles for this template -->
+	<link href="prod/css/main.min.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<svg>
+				<use xlink:href="prod/images/sprite.svg#logo"></use>
+			</svg>
+		</div>
+		<button type="button" class="notifications">
+			<svg >
+				<use xlink:href="prod/images/sprite.svg#notifications"></use>
+			</svg>
+		</button>
+		<form>
+			<input type="search" name="search">
+			<button type="submit" class="search">
+				<svg>
+					<use xlink:href="prod/images/sprite.svg#search-icon"></use>
+				</svg>
+			</button>
+		</form>
+	</header>
+
+	<aside>
+		<div class="profile">
+			<img src="prod/images/02.jpg" alt="avatar">
+			<div class="info">
+				<p>Abhisek Das</p>
+				<p class="followers">10,968 Followers</p>
+			</div>
+		</div>
+		<ul class="menu">
+			<li class="menu-item active-tab" data-target="tab-1">
+				<svg>
+					<use xlink:href="prod/images/sprite.svg#dashboard-icon"></use>
+				</svg>
+				<a class="tab-title" href="#tab-1">Dashboard</a>
+			</li>
+			<li class="menu-item" data-target="tab-2">
+				<svg>
+					<use xlink:href="prod/images/sprite.svg#social-feed-icon"></use>
+				</svg>
+				<a class="tab-title" href="#tab-2">Social Feed</a>
+			</li>
+			<li class="menu-item">
+				<svg>
+					<use xlink:href="prod/images/sprite.svg#invite-friends-icon"></use>
+				</svg>
+				<a class="tab-title" href="#tab-3">Invite Friends</a>
+			</li>
+			<li class="menu-item">
+				<svg>
+					<use xlink:href="prod/images/sprite.svg#settings-icon"></use>
+				</svg>
+				<a class="tab-title" href="#tab-4">Settings</a>
+			</li>
+			<li class="menu-item">
+				<svg>
+					<use xlink:href="prod/images/sprite.svg#log-out-icon"></use>
+				</svg>
+				<a class="tab-title" href="#tab-5">Log out</a>
+			</li>
+		</ul><!-- /.menu -->
+	</aside>
+
+	<main>
+		<div id="tab-1" class="tab-content active">
+			<div class="heading">
+				<p class="username">@abhisek.das</p>
+				<button class="show-modal">+ Add Social Profile</button>
+
+				<!-- Modal window -->
+				<div id="modal-window" class="modal">
+					<p class="modal-title">Add social profile</p>
+					<button class="close-btn">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#Close"></use>
+						</svg>
+					</button>
+					<p>Add new social profile for tracking</p>
+					<form>
+						<label>URL<input type="url" placeholder="https://twitter.com/username"></label>
+						<button class="form-btn">Lookup</button>
+					</form>
+				</div><!-- /.modal-window -->
+			</div><!-- /.heading -->
+
+		<!-- плавающая сетка с фильтрами -->
+			<div class="button-group filter-button-group">
+				<button class="button" data-filter=".group-1">Last day</button>
+				<button class="button" data-filter=".group-2">Week</button>
+				<button class="button is-checked" data-filter=".group-3">Month</button>
+			</div><!-- /.button-group -->
+
+			<div class="grid">
+				<div class="grid-item-size"></div>
+				<div class="grid-item group-3">
+					<div class="social-box facebook">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#Facebook"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">1,701</p>
+							<p>Followers</p>
+						</div>
+						<div class="stats">
+							<p>+4</p>
+							<svg class="arrow">
+								<use xlink:href="prod/images/sprite.svg#Arrow"></use>
+							</svg>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/1.png" alt="avatar">
+						<div class="user-contact">
+							<p class="social">Facebook</p>
+							<p class="login">@abhisekd3</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-1 group-2 group-3">
+					<div class="social-box twitter">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#Twitter"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">1,567</p>
+							<p>Followers</p>
+						</div>
+						<div class="stats">
+							<p>-3</p>
+							<svg class="arrow">
+								<use xlink:href="prod/images/sprite.svg#Arrow"></use>
+							</svg>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/5.png" alt="avatar">
+						<div class="user-contact">
+							<p class="social">Twitter</p>
+							<p class="login">@wholetthedasout</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-2 group-3">
+					<div class="social-box instagram">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#Instagram"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">1,139</p>
+							<p>Followers</p>
+						</div>
+						<div class="stats">
+							<p>+11</p>
+							<svg class="arrow">
+								<use xlink:href="prod/images/sprite.svg#Arrow"></use>
+							</svg>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/02.jpg" alt="avatar">
+						<div class="user-contact">
+							<p class="social">Instagram</p>
+							<p class="login">@wholetthedasout</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-3">
+					<div class="social-box linkedin">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#LinkedIn"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">2,016</p>
+							<p>Followers</p>
+						</div>
+						<div class="stats">
+							<p>+39</p>
+							<svg class="arrow">
+								<use xlink:href="prod/images/sprite.svg#Arrow"></use>
+							</svg>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/1.png" alt="avatar">
+						<div class="user-contact">
+							<p class="social">LinkedIn</p>
+							<p class="login">@abhisekd3</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-1 group-2 group-3">
+					<div class="social-box youtube">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#YouTube"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">3,190</p>
+							<p>SUBSCRIBERS</p>
+						</div>
+						<div class="stats">
+							<p>+22</p>
+							<svg class="arrow">
+								<use xlink:href="prod/images/sprite.svg#Arrow"></use>
+							</svg>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/3.jpg" alt="avatar">
+						<div class="user-contact">
+							<p class="social">YouTube</p>
+							<p class="login">@TheAbhisekD</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-2 group-3">
+					<div class="social-box snapchat">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#Snapchat"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">8,754</p>
+							<p>snap score</p>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/02.jpg" alt="avatar">
+						<div class="user-contact">
+							<p class="social">Snapchat</p>
+							<p class="login">@abhisekd</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-2 group-3">
+					<div class="social-box googleplus">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#GooglePlus"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">1,033</p>
+							<p>followers</p>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/02.jpg" alt="avatar">
+						<div class="user-contact">
+							<p class="social">Google+</p>
+							<p class="login">@+AbhisekDas</p>
+						</div>
+					</div>
+				</div><!-- /.grid-item -->
+
+				<div class="grid-item group-3">
+					<div class="social-box vine">
+						<svg>
+							<use xlink:href="prod/images/sprite.svg#Vine"></use>
+						</svg>
+						<div class="follower-count">
+							<p class="count">1,045</p>
+							<p>Loops</p>
+						</div>
+						<div class="hover-img">
+						</div>
+					</div>
+					<div class="user">
+						<img class="avatar" src="prod/images/4.jpg" alt="avatar">
+						<div class="user-contact">
+							<p class="social">Vine</p>
+							<p class="login">@1316139228245221376</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.grid -->
+		</div><!-- /.tab-content -->
+
+		<div id="tab-2" class="tab-content">
+		</div><!-- /.tab-content -->
+		<div id="tab-3" class="tab-content">
+		</div><!-- /.tab-content -->
+		<div id="tab-4" class="tab-content">
+		</div><!-- /.tab-content -->
+		<div id="tab-5" class="tab-content">
+		</div><!-- /.tab-content -->
+	</main>
+
+	<footer>
+		<ul class="footer-menu">
+			<li class="footer-menu-item">
+				<a href="#">About</a>
+			</li>
+			<li class="footer-menu-item">
+				<a href="#">Terms</a>
+			</li>
+			<li class="footer-menu-item">
+				<a href="#">Privacy</a>
+			</li>
+			<li class="footer-menu-item">
+				<a href="#">Help</a>
+			</li>
+			<li class="footer-menu-item">
+				<a href="#">Report</a>
+			</li>
+		</ul>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script src="prod/js/main.min.js"></script>
+</body>
+</html>
